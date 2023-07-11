@@ -74,10 +74,8 @@ class App {
   }
 
   _removeItem(type, e) {
-    if (
-      e.target.classList.contains("fa-solid") ||
-      e.target.classList.contains("fa-xmark")
-    ) {
+    console.log(e);
+    if (e.target.classList.contains("delete")) {
       if (confirm(`Are you sure you want to delete ${type}`)) {
         type === "meal"
           ? this._tracker.removeMeal(e.target.closest(".card").dataset.id)
