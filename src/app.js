@@ -75,7 +75,7 @@ class App {
 
   _removeItem(type, e) {
     console.log(e);
-    if (e.target.classList.contains("delete")) {
+    if (e.target.closest(".delete")) {
       if (confirm(`Are you sure you want to delete ${type}`)) {
         type === "meal"
           ? this._tracker.removeMeal(e.target.closest(".card").dataset.id)
